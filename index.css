@@ -22,7 +22,7 @@
         padding-top: 1.2rem ;
         padding-right: 3rem;
         max-width: 90%; /* Set max-width to 90% for responsiveness */
-        width: 380px; /* Set a fixed width for larger screens */
+        width: 330px; /* Set a fixed width for larger screens */
         border-radius: 1.5rem;
         border: 2px solid #000;
         margin-bottom: 20px; 
