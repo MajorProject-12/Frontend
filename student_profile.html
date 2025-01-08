@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Check In</title>
+    <title>Student Profile</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="student_check_in.css">
+    <link rel="stylesheet" href="student_profile.css">
     <script src="header.js"></script>
-    <script src="student_check_in.js"></script>
+    <script src="student_profile.js"></script>
 
 </head>
 <body>
@@ -83,31 +83,37 @@
     <main class="content-wrapper">
         <div class="content">
 
-            <div class="scanner">
-                <div class="scanner-wrapper">
-                    <div class="face-scanner">
-                        <div class="scanner-view">
-                            <video id="video" autoplay style="display: none;" width="100%" height="100%"></video>
-                            <img loading="lazy" src="images/icons/face-scan-white.svg" class="scanner-icon" alt="Face Scanner Interface" />
-                        </div>
-                        <div class="greeting-text">Hello !</div>
-                        <button class="scan-button">
-                            <span>Scan</span>
-                            <img loading="lazy" src="images/icons/photo-capture.svg" class="scan-icon" alt="" />
-                        </button>
-                    </div>
-                </div>
-            </div>
-
             <div class="info">
                 <div class="info-wrapper">
                     <div class="info-content">
-                        <h1 class="page-title">Attendance<br>Check In</h1>
-                        <img loading="lazy" src="images/illustrations/frs.svg" class="info-image" alt="Attendance Information Display" />
+                        <div class="title-button-container">
+                            <h1 class="page-title">Academic <br>Details</h1>
+                            <button class="edit-button"><b>Edit</b><img class="edit-icon" src="images/icons/Pen.svg" alt="Pen"></button>
+                        </div>
+                        <div class="list-container">
+                            <ul>
+                                <li><b>Name:</b> {{ student.user.username }}</li>
+                                <li><b>Roll number:</b> {{ student.roll_number }}</li>
+                                <li><b>Branch:</b> {{ student.branch }}</li>
+                                <li><b>Year:</b> {{ student.year }}</li>
+                                <li><b>Semester:</b> {{ student.semester }}</li>
+                                <li><b>Mail:</b> {{ student.user.email }}</li>
+                                <li><b>Gender:</b> {{ student.gender }}</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="face-recognition-section">
+                            <span><b>Face Recognition:</b> Unregistered</span>
+                            <button class="scan-button">Scan</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <div class="img-wrapper">
+                <img src="images/illustrations/profile-illustration.svg" alt="illustration">
+            </div>
+            
         </div>
     </main>
 </div>
