@@ -10,18 +10,6 @@ body {
     font-family: sans-serif;
 }
 
-header{
-    background: rgba(248, 249, 252, 0.147);
-}
-
-#notification-dropdown-menu {
-    background: rgba(248, 249, 252, 0.250);
-}
-
-.dropdown-menu{
-    background: rgba(248, 249, 252, 0.250);
-}
-
 .content-background{
     display: block;
     margin: 35px auto;
@@ -29,7 +17,7 @@ header{
     border-radius: 1.5rem;
     box-shadow: 0px 0px 40px 0px;
     padding-top: 25px;
-    background: rgba(248, 249, 252, 0.147);
+    background: rgba(248, 249, 252, 0.825);
     width: fit-content;
 }
 
