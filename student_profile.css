@@ -93,10 +93,6 @@ li{
    
 }
 
-.edit-button:hover {
-    background-color: #63686d49;
-}
-
 .title-button-container {
     display: flex; 
     align-items: center; 
@@ -134,7 +130,7 @@ hr {
     background-color: #d6dede69; 
     color: rgb(0, 0, 0); 
     height: 2.5rem;
-    width: 5rem;
+    width: 6rem;
     flex-shrink: 0;
     border-radius: 1rem;
     border: none;
@@ -146,8 +142,8 @@ hr {
     transition: background-color 0.3s ease-in-out;
 }
 
-.scan-button:hover {
-    background-color: #63686d49; 
+.scan-button:hover, .edit-button:hover {
+    background-color: #63686d2e; 
 }
 
 @media (max-width: 600px) {

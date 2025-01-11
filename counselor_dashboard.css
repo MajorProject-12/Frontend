@@ -43,6 +43,7 @@ border: 10px;
     flex: 1;
     display: flex;
     justify-content: center;
+    width: 30rem;
 }
 
 .info-wrapper, .details-wrapper {
@@ -54,6 +55,43 @@ border: 10px;
     text-align: start;
 }
 
+@media (max-width: 1200px) {
+
+    .content {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px; 
+        margin: 20px;
+    }
+
+    .info, .details {
+        width: 100%; 
+        justify-content: flex-start; 
+    }
+
+    .info-wrapper, .details-wrapper {
+        padding: 20px;
+        padding-right: 0px;
+        width: 100%; 
+    }
+
+    .details {
+        margin-top: 20px; 
+    }
+
+    .info-title, .details-title {
+        font-size: 1.5rem;
+    }
+
+    .info-wrapper p, .details-wrapper p {
+        font-size: 1rem; 
+    }
+
+    .info-wrapper, .details-wrapper {
+        word-wrap: break-word; 
+        overflow-wrap: break-word; 
+    }
+}
 
 @media (max-width: 600px) {
 
