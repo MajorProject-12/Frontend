@@ -85,7 +85,8 @@
 
             <div class="info">
                 <div class="info-wrapper">
-                    <div class="info-content">
+
+                    <div class="info-content-1">
                         <div class="title-button-container">
                             <h1 class="page-title">Academic <br>Details</h1>
                             <button class="edit-button"><b>Edit</b><img class="edit-icon" src="images/icons/Pen.svg" alt="Pen"></button>
@@ -104,12 +105,118 @@
                         <hr>
                         <div class="face-recognition-section">
                             <span><b>Face Recognition:</b> Unregistered</span>
-                            <button class="scan-button">Scan</button>
+                            <button class="scan-button"><b>Scan</b><img class="scan-icon" src="images/icons/scan-user.svg" alt="scan"></button>
                         </div>
                     </div>
+
+                    <div class="info-content-2">
+                        <div class="title-button-container">
+                            <img src="images/icons/arrow-left.svg" alt="back" class="back-icon">
+                            <h1 class="page-title">Academic <br>Details</h1>
+                            <button class="save-button" id="save-button"><b>Save</b><img class="edit-icon" src="images/icons/Pen.svg" alt="Pen"></button>
+                        </div>
+                        <div class="form-container">
+                            <form id="editProfileForm" 
+                                  method="POST" 
+                                  action="{% url 'update_profile' %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label><b>Name:</b></label>
+                                    <input type="text" 
+                                           name="username" 
+                                           value="{{ student.user.username }}" 
+                                           class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label><b>Roll number:</b></label>
+                                    <input type="text" 
+                                           name="roll_number" 
+                                           value="{{ student.roll_number }}" 
+                                           readonly 
+                                           class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label><b>Branch:</b></label>
+                                    <select name="branch" class="form-control">
+                                        {% for code, name in student.BRANCH_CHOICES %}
+                                            <option value="{{ code }}" 
+                                                    {% if student.branch == code %}selected{% endif %}>
+                                                {{ name }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label><b>Year:</b></label>
+                                    <select name="year" class="form-control">
+                                        {% for code, name in student.YEAR_CHOICES %}
+                                            <option value="{{ code }}" 
+                                                    {% if student.year == code %}selected{% endif %}>
+                                                {{ name }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label><b>Semester:</b></label>
+                                    <select name="semester" class="form-control">
+                                        {% for code, name in student.SEMESTER_CHOICES %}
+                                            <option value="{{ code }}" 
+                                                    {% if student.semester == code %}selected{% endif %}>
+                                                {{ name }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label><b>Mail:</b></label>
+                                    <input type="email" 
+                                           name="email" 
+                                           value="{{ student.user.email }}" 
+                                           class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label><b>Gender:</b></label>
+                                    <select name="gender" class="form-control">
+                                        {% for code, name in student.GENDER_CHOICES %}
+                                            <option value="{{ code }}" 
+                                                    {% if student.gender == code %}selected{% endif %}>
+                                                {{ name }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="info-content-3">
+                        <div class="title-button-container">
+                            <h1 class="page-title">Face <br>Recognition</h1>
+                            <button class="close-button"><b>Close</b><img class="edit-icon" src="images/icons/button-close.svg" alt="close"></button>
+                        </div>
+                        <div class="scanner-container">
+                            <div class="scanner">
+                                <div class="scanner-wrapper">
+                                    <div class="face-scanner">
+                                        <div class="scanner-view">
+                                            <video id="video" autoplay style="display: none;" width="100%" height="100%"></video>
+                                            <img loading="lazy" src="images/icons/face-scan-white.svg" class="scanner-icon" alt="Face Scanner Interface" />
+                                        </div>
+                                        <div class="greeting-text">Hello !</div>
+                                        <button class="scan-button-main">
+                                            <span>Scan</span>
+                                            <img loading="lazy" src="images/icons/photo-capture.svg" class="scan-icon-main" alt="" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
                 </div>
             </div>
-
             <div class="img-wrapper">
                 <img src="images/illustrations/profile-illustration.svg" alt="illustration">
             </div>
