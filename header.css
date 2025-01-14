@@ -136,8 +136,13 @@ margin-top: 20px;
 font-size: 16px;
 }
 
-.dropdown-menu .footer a {
+.dropdown-menu .footer #sign_out {
 color: #ff0000;
+text-decoration: none;
+}
+
+.dropdown-menu .footer #faqs {
+color: rgba(0, 0, 255, 0.581);
 text-decoration: none;
 }
 
@@ -320,8 +325,13 @@ font-size: 16px;
         font-size: 16px;
     }
 
-    .burger-dropdown .footer a {
+    .burger-dropdown .footer #sign_out {
         color: #ff0000;
+        text-decoration: none;
+        }
+        
+    .burger-dropdown .footer #faqs {
+        color: rgba(0, 0, 255, 0.581);
         text-decoration: none;
     }
 }
@@ -429,8 +439,13 @@ font-size: 16px;
         font-size: 16px;
     }
 
-    .burger-dropdown .footer a {
+    .burger-dropdown .footer #sign_out {
         color: #ff0000;
+        text-decoration: none;
+        }
+        
+    .burger-dropdown .footer #faqs {
+        color: rgba(0, 0, 255, 0.581);
         text-decoration: none;
     }
 }
