@@ -12,6 +12,9 @@
     <script src="header.js"></script>
     <script src="student_statistics.js"></script>
 
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- Flatpickr CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
@@ -151,52 +154,19 @@
 
 
                 <div class="attendance-container">
-                    <div class="header-wrapper">
-                      <div class="attendance-title">Attendance</div>
-                      <div class="month-selector">
-                        <div class="month-text">Month</div>
-                        <img class="month-icon" src="https://cdn.builder.io/api/v1/image/assets/f04874505a8645d38916778bb4be3769/50ff37c67eed57c5de832541a465aa4b399704e34a4f53b6c14a97cde09d53d2?apiKey=f04874505a8645d38916778bb4be3769&" alt="" loading="lazy" />
-                      </div>
+
+                    <div>
+                        <canvas id="Chart" width="500" height="280"></canvas>
                     </div>
-                    <div class="divider"></div>
-                    <div class="chart-container">
-                      <div class="y-axis-labels">
-                        <div>30</div>
-                        <div class="y-axis-value">20</div>
-                        <div class="y-axis-bottom">
-                          <div>10</div>
-                          <div class="y-axis-value">0</div>
-                        </div>
-                      </div>
-                      <div class="bar-wrapper" style="padding-top: 140px"><div class="bar" style="height: 60px"></div></div>
-                      <div class="bar-wrapper" style="padding-top: 124px"><div class="bar" style="height: 76px"></div></div>
-                      <div class="bar-wrapper" style="padding-top: 124px"><div class="bar" style="height: 76px"></div></div>
-                      <div class="bar-wrapper" style="padding-top: 78px"><div class="bar" style="height: 122px"></div></div>
-                      <div class="bar-wrapper" style="padding-top: 62px"><div class="bar" style="height: 138px"></div></div>
-                      <div class="bar-wrapper" style="padding-top: 94px"><div class="bar" style="height: 106px"></div></div>
-                      <div class="bar-wrapper" style="padding-top: 77px"><div class="bar" style="height: 123px"></div></div>
-                      <div class="bar-wrapper" style="padding-top: 140px"><div class="bar" style="height: 60px"></div></div>
-                      <div class="bar-wrapper" style="padding-top: 62px"><div class="bar" style="height: 138px"></div></div>
-                      <div class="bar-wrapper" style="padding-top: 34px"><div class="bar" style="height: 166px"></div></div>
-                      <div class="bar-wrapper" style="padding-top: 18px"><div class="bar" style="height: 182px"></div></div>
-                      <div class="bar-wrapper"><div class="bar" style="height: 199px"></div></div>
+
+                    <div class="chart_types">
+                        <button class="BarChart">BarChart</button>
+                        <button class="LineChart">LineChart</button>
+                        <button class="PieChart">PieChart</button>
                     </div>
-                    <div class="x-axis-labels">
-                      <div class="month-label">JAN</div>
-                      <div>FEB</div>
-                      <div>MAR</div>
-                      <div>APR</div>
-                      <div>MAY</div>
-                      <div>JUN</div>
-                      <div>JUL</div>
-                      <div>AUG</div>
-                      <div>SEP</div>
-                      <div>OCT</div>
-                      <div>NOV</div>
-                      <div>DEC</div>
-                    </div>
-                  </div>
+                </div>
         </main>
     </div>
+
 </body>
 </html>
