@@ -48,19 +48,6 @@ body {
     border: 0;
     visibility: hidden;
   }
-
-
-.flatpickr-calendar {
-    display: none;
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    z-index: 1000; 
-}
-
-.flatpickr-calendar.open {
-    display: block;
-}
   
   .calendar-container {
     border-radius: 15px;
@@ -279,6 +266,7 @@ body {
   box-shadow: none;
   transform: translateY(0);
 }
+
 
 @media (max-width: 1050px) {
 
