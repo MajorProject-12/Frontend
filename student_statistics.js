@@ -83,9 +83,4 @@ document.addEventListener("DOMContentLoaded", function () {
     initializeChart('doughnut');
     });
     
-    // Add a resize event listener to restart the chart on media query changes
-    window.addEventListener('resize', () => {
-    initializeChart(chart.config.type); // Reinitialize with the current chart type
-    });
-
 });
