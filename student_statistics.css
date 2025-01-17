@@ -318,7 +318,7 @@ body {
 
   .content-wrapper{
       flex-direction: column;
-      gap: 2 5px;
+      gap: 25px;
       align-items: center;
   }
   
@@ -335,7 +335,7 @@ body {
   .semester-container{
     font-size: 15px;
   }
-  
+
   .page-title{
     margin-top: 20px;
   }
