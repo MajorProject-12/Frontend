@@ -287,11 +287,6 @@ body {
   .group{
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
-  }
-
-  .title-wrapper{
-    order: -1;
   }
 
   .page-title{
@@ -334,6 +329,14 @@ body {
   
   .semester-container{
     font-size: 15px;
+  }
+
+  .group{
+    margin-bottom: 25px;
+  }
+
+  .title-wrapper{
+    order: -1;
   }
 
   .page-title{
