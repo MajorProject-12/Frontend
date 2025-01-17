@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counselor Dashboard</title>
+    <title>Settings</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="counselor_dashboard.css">
+    <link rel="stylesheet" href="counselor_settings.css">
     <script src="header.js"></script>
-    
+    <script src="counselor_settings.js"></script>
 </head>
 <body>
     <header>
@@ -78,37 +78,18 @@
         </div>
     </div>
     </header> 
-    
-    <div class="content-background">
-    <main class="content-wrapper">
-        <div class="content">
 
-            <div class="info">
-                <div class="info-wrapper">
-                    <div class="info-content">
-                        <h1 class="info-title">Welcome, <br>{{ counselor.user.username }}</h1>
-                        <p>Branch: {{ counselor.get_branch_display }}</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="details">
-                <div class="details-wrapper">
-                    <div class="details-content">
-                        <h1 class="details-title">Assigned Students:</h1>
-                        <ul>
-                            {% for student in assigned_students %}
-                            <li>{{ student.user.username }} - {{ student.roll_number }}</li>
-                            {% empty %}
-                            <p>No students assigned.</p>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <div class="content">
+        <main class="content-wrapper">
 
-        </div>
-    </main>
-</div>
+                <div class="title-wrapper">
+                    <h1 class="page-title">Settings</h1>
+                 </div>
+
+                 <div class="section-empty">
+                    <img src="images/illustrations/Not-found.svg" alt="illustration" class="illustration">
+                    <p class="section-empty-text">This page is<br><b>Still under progress!</b></p>
+                 </div>
+                 
 </body>
 </html>
