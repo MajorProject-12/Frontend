@@ -408,7 +408,7 @@ header .date-selectors-new select {
   transform: translate(-50%, -50%);
 }
 .days-new li.active::before{
-  background: #9B59B6;
+  background: #b6bcc6;
 }
 .days-new li:not(.active):hover::before{
   background: #f2f2f2;
