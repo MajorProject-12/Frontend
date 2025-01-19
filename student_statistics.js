@@ -82,6 +82,41 @@ document.addEventListener("DOMContentLoaded", function () {
     pieChartBtn.addEventListener('click', () => {
     initializeChart('doughnut');
     });
+
+    // Define the chart restart function
+    function restartChart() {
+        // Destroy the existing chart
+        if (chart) {
+        chart.destroy();
+        }
+        // Initialize the chart again
+        initializeChart();
+    }
+    
+    // Define the media queries for different window sizes
+    const mediaQueries = [
+        {
+        query: '(max-width: 650px)',
+        listener: restartChart,
+        },
+        {
+        query: '(max-width: 1050px)',
+        listener: restartChart,
+        },
+        {
+        query: '(min-width: 1051px)',
+        listener: restartChart,
+        },
+    ];
+    
+    // Create media query listeners
+    mediaQueries.forEach((query) => {
+        const mediaQueryList = window.matchMedia(query.query);
+        mediaQueryList.addListener(query.listener);
+        // Trigger the listener once for the initial window size
+        query.listener();
+    });
+
         
     /*calender*/
     // Get the calendar container elements
