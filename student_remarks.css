@@ -95,6 +95,18 @@ border: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
+#date-column, 
+td:nth-child(2) {
+    width: 150px; 
+    white-space: nowrap;
+}
+
+#remarks-column, 
+td:nth-child(3) {
+    width: 100%; 
+    word-wrap: break-word;
+}
+
 
 @media (max-width: 600px) {
 
