@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const container1 = document.querySelector(".container-1");
     const container2 = document.querySelector(".container-2");
 
+    // Set the "New" button to the active state by default
+    newButton.classList.add("active");
+
     // Add event listeners to the buttons
     newButton.addEventListener("click", function () {
         // Only proceed if container-1 is not already displayed
@@ -16,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
             fadeIn(container1);
 
             container2.style.display = "none";
+
+            // Add active class to new button
+            newButton.classList.add("active");
+            recordsButton.classList.remove("active");
         }
     });
 
@@ -28,6 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
             fadeIn(container2);
 
             container1.style.display = "none";
+
+            // Add active class to records button
+            recordsButton.classList.add("active");
+            newButton.classList.remove("active");
         }
     });
 

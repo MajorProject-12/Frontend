@@ -166,6 +166,9 @@ tr:hover {
 background-color: #fbf8f8;
 }
 
+.button-container button.active {
+background-color: #ffffff;
+}
 
 @media (max-width: 768px) {
 .content-wrapper {

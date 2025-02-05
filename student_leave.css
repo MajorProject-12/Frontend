@@ -179,6 +179,10 @@ tr:hover {
     border-radius: 10px;
 }
 
+.button-container button.active {
+    background-color: #ffffff;
+}
+
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;
