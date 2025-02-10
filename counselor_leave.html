@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Reports</title>
+    <title>Leave Applications</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="counselor_weekly_reports.css">
+    <link rel="stylesheet" href="counselor_leave.css">
     <script src="header.js"></script>
-    <script src="counselor_weekly_reports.js"></script>
+    <script src="counselor_leave.js"></script>
 </head>
 <body>
     <header>
@@ -84,10 +84,10 @@
 
         <main class="content-wrapper">
             <div class="sidebar">
-                <h2>Weekly<br>Reports</h2>
+                <h2>Leave<br>Applications</h2>
                 <div class="button-container">
                     <button class="new">New</button>
-                    <button class="records">Archive</button>
+                    <button class="records">Records</button>
                 </div>
             </div>
 
@@ -128,7 +128,14 @@
             </div>
 
             <div class="container-1">
-                <h1>This week Reports</h1>
+
+                <div class="info">
+                    <h1>Today's Leave Applications</h1>
+                    <div class="tooltip"><img src="images/icons/info.svg" alt="info" height="20px">
+                        <span class="tooltiptext">Data modifications are allowed only within 15 minutes from the initial change.</span>
+                      </div>
+                </div>                
+                
                 <table>
                     <thead>
                         <tr>
@@ -136,37 +143,39 @@
                             <th>Date</th>
                             <th>Roll No</th>
                             <th>Student Name</th>
-                            <th>Work Done</th>
+                            <th>Absence reason</th>
+                            <th>Number of Days</th>
+                            <th>Status</th>
+                            <th>Operations</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
                             <td>12/03/2023</td>
-                            <td>21bq1a4200</td>
+                            <td>21bq1a4201</td>
                             <td>Rohit</td>
-                            <td>1. Completed course on Java 2. Currently doing Python course</td>
+                            <td>Sick</td>
+                            <td>1 day</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>12/03/2023</td>
-                            <td>21bq1a4220</td>
-                            <td>Rohan</td>
-                            <td>1. Participated in coding challenge 2. Working on personal project</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>12/03/2023</td>
-                            <td>21bq1a4233</td>
+                            <td>15/03/2023</td>
+                            <td>21bq1a4227</td>
                             <td>Naveen</td>
-                            <td>1. Completed assignment on Data Structures 2. Started learning Machine Learning</td>
+                            <td>Transport issue</td>
+                            <td>1 day</td>
+                            <td><span class="status approved">Approved</span></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
             <div class="container-2">
-                <h1>Reports Archive</h1>
+                <h1>Absence records</h1>
                 <table>
                     <thead>
                         <tr>
@@ -174,58 +183,74 @@
                             <th>Date</th>
                             <th>Roll No</th>
                             <th>Student Name</th>
-                            <th>Work Done</th>
+                            <th>Absence reason</th>
+                            <th>Number of Days</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
                             <td>12/03/2023</td>
-                            <td>21bq1a4200</td>
-                            <td>Rohit</td>
-                            <td>1. Completed course on Java 2. Currently doing Python course</td>
+                            <td>21bq1a4208</td>
+                            <td>Rohan</td>
+                            <td>Sick</td>
+                            <td>1 day</td>
+                            <td><span class="status pending">Approved</span></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>19/03/2023</td>
-                            <td>21bq1a4220</td>
-                            <td>Rohan</td>
-                            <td>1. Participated in coding challenge 2. Working on personal project</td>
+                            <td>15/03/2023</td>
+                            <td>21bq1a4223</td>
+                            <td>Akash</td>
+                            <td>Transport issue</td>
+                            <td>1 day</td>
+                            <td><span class="status approved">Approved</span></td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>26/03/2023</td>
-                            <td>21bq1a4233</td>
-                            <td>Naveen</td>
-                            <td>1. Completed assignment on Data Structures 2. Started learning Machine Learning</td>
+                            <td>18/03/2023</td>
+                            <td>21bq1a4211</td>
+                            <td>Manish</td>
+                            <td>Heavy Rain</td>
+                            <td>1 day</td>
+                            <td><span class="status approved">Approved</span></td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>02/04/2023</td>
-                            <td>21bq1a4211</td>
-                            <td>Akash</td>
-                            <td>1. Attended seminar on Artificial Intelligence 2. Working on group project</td>
+                            <td>20/03/2023</td>
+                            <td>21bq1a4239</td>
+                            <td>Abhishek</td>
+                            <td>Function</td>
+                            <td>4 day</td>
+                            <td><span class="status rejected">Rejected</span></td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>09/04/2023</td>
-                            <td>21bq1a4222</td>
-                            <td>Abhishek</td>
-                            <td>1. Completed course on Web Development 2. Currently doing internship</td>
+                            <td>22/03/2023</td>
+                            <td>21bq1a4205</td>
+                            <td>Pranav</td>
+                            <td>Need to go bank</td>
+                            <td>1 day</td>
+                            <td><span class="status approved">Approved</span></td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>16/04/2023</td>
-                            <td>21bq1a4234</td>
+                            <td>25/03/2023</td>
+                            <td>21bq1a4229</td>
                             <td>Aditya</td>
-                            <td>1. Participated in hackathon 2. Working on personal blog</td>
+                            <td>Sick</td>
+                            <td>1 day</td>
+                            <td><span class="status approved">Approved</span></td>
                         </tr>
                         <tr>
                             <td>7</td>
-                            <td>23/04/2023</td>
-                            <td>21bq1a4215</td>
-                            <td>Amit</td>
-                            <td>1. Completed assignment on Algorithms 2. Started learning Cloud Computing</td>
+                            <td>28/03/2023</td>
+                            <td>21bq1a4217</td>
+                            <td>Harish</td>
+                            <td>Aadhar Update</td>
+                            <td>1 day</td>
+                            <td><span class="status approved">Approved</span></td>
                         </tr>
                     </tbody>
                 </table>
