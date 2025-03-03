@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counselor Dashboard</title>
+    <title>Student Insights</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="counselor_dashboard.css">
+    <link rel="stylesheet" href="counselor_insights.css">
     <script src="header.js"></script>
-    
+    <script src="counselor_insights.js"></script>
+
 </head>
 <body>
     <header>
@@ -78,37 +80,81 @@
             </div>
         </div>
     </header>
-    
-    <div class="content-background">
-    <main class="content-wrapper">
-        <div class="content">
 
-            <div class="info">
-                <div class="info-wrapper">
-                    <div class="info-content">
-                        <h1 class="info-title">Welcome, <br>{{ counselor.user.username }}</h1>
-                        <p>Branch: {{ counselor.get_branch_display }}</p>
-                    </div>
-                </div>
+    <div class="content">
+
+        <main class="content-wrapper">
+            <div class="sidebar">
+                <h2>Student<br>Insights</h2>
             </div>
-            
-            <div class="details">
-                <div class="details-wrapper">
-                    <div class="details-content">
-                        <h1 class="details-title">Assigned Students:</h1>
-                        <ul>
-                            {% for student in assigned_students %}
-                            <li>{{ student.user.username }} - {{ student.roll_number }}</li>
-                            {% empty %}
-                            <p>No students assigned.</p>
-                            {% endfor %}
-                        </ul>
-                    </div>
+
+            <div class="top-controls">
+                <div class="search-container">
+                    <input type="text" placeholder="search by name or roll no">
+                    <i class="fas fa-search search-icon"></i>
                 </div>
             </div>
 
-        </div>
-    </main>
-</div>
+            <div class="container-1">
+
+                <div class="info">
+                    <h1>Assigned Students</h1>
+                </div>                
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Roll No</th>
+                            <th>Student Name</th>
+                            <th>Attendance(%)</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>21bq1a4201</td>
+                            <td>Rohit</td>
+                            <td>80%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>21bq1a4227</td>
+                            <td>Naveen</td>
+                            <td>71%</td>
+                            <td></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container-2">
+                <div class="info-stud">
+                    <form>
+                        <div class="form-group">
+                            <h4>Name:</h4>
+                            <h4>Roll no:</h4>
+                            <h4>Attendance(%):</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="Remarks">Remarks:</label>
+                            <textarea id="Remarks" placeholder=".........................................................."></textarea>
+                        </div>
+                        <div class="form-actions">  
+                            <button type="submit" class="submit-btn">Submit</button>
+                            <button type="reset" class="reset-btn">Reset</button>
+                        </div>
+                    </form>
+                    <div class="close-btn-container">
+                        <button class="close-btn"><b>Close</b><img class="edit-icon" src="images/icons/button-close.svg" alt="close" height="20px"></button>
+                    </div>                   
+                </div>
+            </div>
+
+        </main>
+    </div>
 </body>
 </html>
