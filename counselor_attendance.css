@@ -32,6 +32,46 @@ body {
   flex-direction: column;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  height: fit-content;
+  align-self: center;
+}
+
+.card {
+  background-color: #ffffffa8;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  width: 100px;
+  height: 80px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.card p {
+  margin: 0;
+  font-size: 14px;
+  color: grey;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+.card .highlight {
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+}
+.card .subtext {
+  font-size: 18px;
+  color: grey;
+}
+
 .container-1 {
   display: block;
   opacity: 1;

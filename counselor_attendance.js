@@ -95,4 +95,33 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the container elements
     const searchContainer = document.querySelector('.search-container');
     
+    // Get the present and absent count elements
+    const presentCountElement = document.querySelectorAll('.card .highlight')[0];
+    const absentCountElement = document.querySelectorAll('.card .highlight')[1];
+
+    // Initialize present and absent counts
+    let presentCount = 0;
+    let absentCount = 0;
+
+    // Assuming you have a table with attendance data
+    // Get the table body element
+    // const tableBody = document.querySelector('tbody');
+
+    // Iterate over each table row
+    Array.from(tableBody.rows).forEach((row) => {
+    // Get the status cell
+    const statusCell = row.cells[5].textContent.trim();
+
+    // Check if the student is present or absent
+    if (statusCell === 'Present') {
+        presentCount++;
+    } else if (statusCell === 'Absent') {
+        absentCount++;
+    }
+    });
+
+    // Update the present and absent counts
+    presentCountElement.textContent = presentCount.toString();
+    absentCountElement.textContent = absentCount.toString();
+
 });
