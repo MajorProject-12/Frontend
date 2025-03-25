@@ -87,6 +87,7 @@ backdrop-filter: blur(20px);
 padding: 20px;
 width: 200px;
 opacity: 0;
+z-index: 1;
 visibility: hidden;
 transition: opacity 0.3s ease, visibility 0.3s ease;
 display: none;
@@ -276,6 +277,7 @@ font-size: 16px;
         padding: 20px;
         width: 200px;
         opacity: 0;
+        z-index: 1;
         visibility: hidden;
         transition: opacity 0.3s ease, visibility 0.3s ease;
         display: none; /* Initially hidden */
@@ -390,6 +392,7 @@ font-size: 16px;
         padding: 20px;
         width: 200px;
         opacity: 0;
+        z-index: 1;
         visibility: hidden;
         transition: opacity 0.3s ease, visibility 0.3s ease;
         display: none; /* Initially hidden */
