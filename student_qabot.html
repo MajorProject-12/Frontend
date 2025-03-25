@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student remarks</title>
+    <title>QA Bot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="student_remarks.css">
-    <script src="header.js"></script>
-    <script src="student_remarks.js"></script>
+    <link rel="stylesheet" href="student_qabot.css">
+    <script src="header.js"></script>    
 </head>
 <body>
     <header>
@@ -86,83 +85,13 @@
 
     <div class="content">
         <main class="content-wrapper">
-
-                <div class="title-wrapper">
-                    <h1 class="page-title">Remarks</h1>
-                 </div>
-
-                 <div class="section-empty">
-                    <img src="images/illustrations/Remarks-empty.png" alt="illustration" class="illustration">
-                    <p class="section-empty-text"><b>Nothing Here !</b></p>
-                 </div>
-                 
-                 <div class="section-remarks">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>S.No</th>
-                                <th id="date-column">Date</th>
-                                <th id="remarks-column">Remarks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>2023-10-01</td>
-                                <td>Good participation in class discussions.</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>2023-10-05</td>
-                                <td>Needs improvement in submitting assignments on time.</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>2023-10-10</td>
-                                <td>Excellent performance in the recent project.</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>2023-10-15</td>
-                                <td>Showed great teamwork during group activities.</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>2023-10-20</td>
-                                <td>Struggled with understanding advanced concepts.</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>2023-10-25</td>
-                                <td>Improved significantly in recent quizzes.</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>2023-10-30</td>
-                                <td>Consistently punctual and prepared for class.</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>2023-11-01</td>
-                                <td>Demonstrated strong leadership skills in group projects.</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>2023-11-05</td>
-                                <td>Needs to focus more on practical applications of theory.</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>2023-11-10</td>
-                                <td>Outstanding creativity in solving complex problems.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                 
-
+            <gradio-app src="https://sarath0x8f-document-qa-bot.hf.space"></gradio-app>
         </main>
     </div>
 
 </body>
+<script
+	type="module"
+	src="https://gradio.s3-us-west-2.amazonaws.com/4.44.0/gradio.js"
+></script>
 </html>
