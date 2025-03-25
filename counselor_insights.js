@@ -1,36 +1,5 @@
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function () {
-
-    // Get the table body element
-    const tableBody = document.querySelector('table tbody');
-    
-    // Function to add remarks button to each table row
-    function addRemarksButton() {
-        // Get all table rows
-        const tableRows = tableBody.querySelectorAll('tr');
-    
-        // Loop through each table row
-        tableRows.forEach(function(row) {
-        // Get the last table cell in the row
-        const lastTableCell = row.querySelector('td:last-child');
-    
-        // Create a new remarks button element
-        const remarksButton = document.createElement('span');
-        remarksButton.className = 'remarks-btn';
-        remarksButton.textContent = 'Remarks ';
-        const paperPlaneIcon = document.createElement('img');
-        paperPlaneIcon.src = 'images/icons/paper-plane.png';
-        paperPlaneIcon.height = 20;
-        remarksButton.appendChild(paperPlaneIcon);
-    
-        // Append the remarks button to the last table cell
-        lastTableCell.innerHTML = '';
-        lastTableCell.appendChild(remarksButton);
-        });
-    }
-    
-    // Call the function to add remarks button to each table row
-    addRemarksButton();
     
     // Get the search input element
     const searchInput = document.querySelector('.search-container input');

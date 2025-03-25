@@ -47,6 +47,22 @@ h1 {
   font-weight: bold;
 }
 
+.remarks-btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+}
+
+.remarks-btn img {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
 .form-group {
   margin-bottom: 20px;
 }
