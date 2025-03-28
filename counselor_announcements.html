@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+    <title>Announcements</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="counselor_settings.css">
+    <link rel="stylesheet" href="counselor_announcements.css">
     <script src="header.js"></script>
-    <script src="counselor_settings.js"></script>
 </head>
 <body>
     <header>
@@ -89,16 +89,53 @@
     </header>
 
     <div class="content">
+
         <main class="content-wrapper">
+            <div class="sidebar">
+                <h2>Announcements</h2>
+            </div>
 
-                <div class="title-wrapper">
-                    <h1 class="page-title">Settings</h1>
-                 </div>
+        <div class="Announcement">
+            <div class="container-1">
+                <h1>Send Announcement</h1>
+                <form>
+                    <div class="form-group">
+                        <textarea id="msg" placeholder="Type Your Message................."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Send<i class="fas fa-paper-plane msg-icon"></i></button>
+                        <button type="reset" class="reset-btn">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-                 <div class="section-empty">
-                    <img src="images/illustrations/Not-found.svg" alt="illustration" class="illustration">
-                    <p class="section-empty-text">This page is<br><b>Still under progress!</b></p>
-                 </div>
-                 
+            <div class="container-2">               
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Announcement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="date-col">2022-01-01</td>
+                            <td class="time-col">10:00 AM</td>
+                            <td class="message-col">Notification: The college administration has scheduled a mandatory orientation program for all new students on January 10th at 2:00 PM in the auditorium.</td>
+                        </tr>
+                        <tr>
+                            <td class="date-col">2022-01-02</td>
+                            <td class="time-col">11:00 AM</td>
+                            <td class="message-col">Important Update: The deadline for submitting semester fees has been extended to January 15th. Students are advised to make the necessary payments on or before the due date to avoid any penalties.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
 </body>
 </html>
